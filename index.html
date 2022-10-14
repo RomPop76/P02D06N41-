@@ -10,16 +10,18 @@
     <style>
         body {
             background-color: #444;
+            animation: sky 15s infinite linear;
         }
        
         .sun {
             position: fixed;
-            bottom: 15%;
+            bottom: 5%;
             left: 10%;
             width: 15vw;
             height: 15vw;
             border-radius: 50%;
             background-color: darkred;
+            animation: sun 15s infinite linear;
         }
 
         .grass {
@@ -29,6 +31,7 @@
             bottom: 0;
             height: 30vh;
             background-color: #222;
+            animation: grass 15s infinite linear;
         }
 
         @keyframes sky {
@@ -36,20 +39,62 @@
                 background-color: #444;
             }
 
-            30% {
-                background-color: pink;
+            20% {
+                background-color: rgb(189, 128, 138);
             }
 
             50% {
                 background-color: lightblue;
             }
 
-            70% {
-                background-color: pink;
+            80% {
+                background-color: rgb(189, 128, 138);
             }
             
             100% {
                 background-color: #444;
+            }
+        }
+
+        @keyframes grass {
+            0% {
+                background-color: #222;
+            }
+
+            20% {
+                background-color: green;
+            }
+
+            50% {
+                background-color: greenyellow;
+            }
+
+            80% {
+                background-color: green;
+            }
+
+            100% {
+                background-color: #222;
+            }
+        }
+
+        @keyframes sun {
+            0% {
+                bottom: 5%;
+                left: 10%;
+                background-color: darkred;
+            }
+
+            50% {
+                bottom: 45%;
+                left: 50%;
+                background-color: yellow;
+            }
+
+            100% {
+                bottom: 5%;
+                left: 90%;
+                background-color: darkred;
             }
         }
     </style>
